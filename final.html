@@ -6,40 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
     <title>Final test</title>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div id="style-button" class="row">
-            <div class="col-md-4">
-                <button id="bold" class="btn btn-primary"><strong>B</strong></button>
-            </div>
-            <div class="col-md-4">
-                <button id="italic" class="btn btn-primary"><em>I</em></button>
-            </div>
-            <div class="col-md-4">
-                <button id="underline" class="btn btn-primary"><u>U</u></button>
-            </div>
-        </div>
-        <textarea name="text" id="text" class="col-md-12"></textarea>
+    <div>
+        <img class="img5-1" src="./img/play.png" alt="play" onclick="test6Play()">
+        <img class="img5-1" src="./img/stop.png" alt="stop" onclick="test6Stop()">
+    </div>
+    <div id="test6Output"></div>
+    <div>
+        <img id="test6-1" class="img5-2" src="./img/1.jpg" alt="1">
+        <img id="test6-2" class="img5-2" src="./img/2.jpg" alt="2">
+        <img id="test6-3" class="img5-2" src="./img/3.jpg" alt="3">
+        <img id="test6-4" class="img5-2" src="./img/4.jpg" alt="4">
+        <img id="test6-5" class="img5-2" src="./img/5.jpg" alt="5">
+        <img id="test6-6" class="img5-2" src="./img/6.jpg" alt="6">
     </div>
 </body>
-<script>
-    $("#bold").click(
-        function() {
-            $("#text").select(
-                function() {
-                    $("#text").select(css("font-weight", "bold"));
-                }
-            )
-        }
-    );
-</script>
 
 </html>
