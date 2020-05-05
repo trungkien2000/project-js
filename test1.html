@@ -4,12 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Test 1</title>
 </head>
 
 <body>
-    <div>
-        <h1>Test 1</h1>
+    <div id="input">
+        <h1>CHOOSE YOUR DATE OF BIRTH</h1>
+        <label for="day">DAY</label>
+        <select name="day" id="day">
+           <script>
+               test1Day();
+           </script>
+        </select>
+        <label for="month">MONTH</label>
+        <select name="month" id="month">
+            <script>
+                test1Month();
+            </script>
+        </select>
+        <label for="year">YEAR</label>
+        <select name="year" id="year">
+            <script>
+                test1Year();
+            </script>
+        </select>
+    </div>
+    <button type="submit">Submit</button>
+    <div id="output">
+        Your Birthday is:
     </div>
 </body>
 

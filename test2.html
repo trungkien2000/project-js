@@ -4,13 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Test 2</title>
 </head>
 
 <body>
-    <div>
-        <h1>Test 2</h1>
-    </div>
+    <form action="">
+        <label for="xvalue">X = </label>
+        <input type="text" name="xvalue" id="xvalue">
+        <label for="yvalue">Y = </label>
+        <input type="text" name="yvalue" id="yvalue">
+        <label for="svalue">S = </label>
+        <input type="text" name="svalue" id="svalue" readonly>
+        <input type="button" value="Sum" id="submit2" onclick="test2Submit()">
+    </form>
 </body>
 
 </html>
