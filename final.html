@@ -5,30 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <style>
+        img {
+            border-radius: 20px;
+        }
+        
         .img5-1 {
             width: 60px;
             height: auto;
-            margin: 200px 20px 0 20px;
+            margin: 20px 20px 0 20px;
         }
         
         .img5-2 {
             width: 150px;
             height: auto;
-            border-radius: 20px;
             margin: 40px 20px 0 20px;
+        }
+        
+        #test6Output {
+            margin-top: 30px;
         }
     </style>
     <title>Final test</title>
 </head>
 
 <body>
+    <div id="test6Output"></div>
     <div>
         <img class="img5-1" src="./img/play.png" alt="play" onclick="test6Play()">
         <img class="img5-1" src="./img/stop.png" alt="stop" onclick="test6Stop()">
     </div>
-    <div id="test6Output"></div>
     <div>
         <img id="test6-1" class="img5-2" src="./img/1.jpg" alt="1">
         <img id="test6-2" class="img5-2" src="./img/2.jpg" alt="2">
@@ -39,26 +45,25 @@
     </div>
 </body>
 <script>
+    var checkTest6 = false;
     test6Play = function() {
-        var count6 = 0;
-        const temp = 'test6-'
-        for (let i = 1; i <= 6; i++) {
-            setTimeout(function() {
-
-            }, 1000)
-        }
+        checkTest6 = false;
+        var index = 1;
         var sI6 = setInterval(function() {
-            count6++;
-            var show = temp + count6;
-            console.log(count6);
-            console.log(show);
-            document.getElementById('test6Output').innerHTML = document.getElementById('show');
-        }, 1000);
+            if (!checkTest6) {
+                document.getElementById('test6Output').innerHTML = '<img src="./img/' + index + '.jpg" width="25%">';
+                console.log(index);
+                index++;
+                if (index == 7) {
+                    index = 1;
+                }
+            }
+        }, 1000)
         return sI6;
     }
 
     test6Stop = function() {
-
+        checkTest6 = true;
     }
 </script>
 
