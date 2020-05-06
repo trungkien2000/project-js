@@ -6,14 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <style>
+        div:first-child {
+            margin-top: 50px;
+            font-size: 50px;
+        }
+    </style>
     <title>Test 3</title>
 </head>
 
 <body>
     <div id="test3Output"></div>
-    <textarea name="test3Text" id="test3Text" cols="30" rows="10"></textarea>
-    <button id="test3Bold" onclick="test3Bold()">Bold</button>
-
+    <div><textarea name="test3Text" id="test3Text" cols="30" rows="10"></textarea></div>
+    <div><button id="test3Bold" onclick="test3Bold()">Bold</button></div>
 </body>
+<script>
+    test3Bold = function() {
+        var text = document.getElementById('test3Text').value;
+        var out = document.getElementById('test3Output');
+        out.style.fontWeight = "bold";
+        out.innerHTML = text;
+    }
+</script>
 
 </html>

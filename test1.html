@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <style>
+        h1 {
+            font-size: 40px;
+        }
+        
+        select {
+            font-size: 20px;
+        }
+    </style>
     <title>Test 1</title>
 </head>
 
@@ -31,10 +40,31 @@
             </script>
         </select>
     </div>
-    <button type="submit">Submit</button>
-    <div id="output">
-        Your Birthday is:
-    </div>
 </body>
+<script>
+    test1Day = function() {
+        var day = '';
+        for (var i = 1; i <= 31; i++) {
+            day = '<option value="' + i + '">' + i + '</option>';
+            document.write(day);
+        }
+    }
+
+    test1Month = function() {
+        var month = '';
+        for (var i = 1; i <= 12; i++) {
+            month = '<option value="' + i + '">' + i + '</option>';
+            document.write(month);
+        }
+    }
+
+    test1Year = function() {
+        var year = '';
+        for (var i = 1980; i <= 2020; i++) {
+            year = '<option value="' + i + '">' + i + '</option>';
+            document.write(year);
+        }
+    }
+</script>
 
 </html>

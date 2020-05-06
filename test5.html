@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <style>
+        div {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+    </style>
     <title>Test 5</title>
 </head>
 
@@ -14,5 +21,26 @@
     <button id="test5Start" onclick="test5Start()">Start</button>
     <button id="test5Stop" onclick="test5Stop()">Stop</button>
 </body>
+<script>
+    var checkTest5 = false;
+    test5Start = function() {
+        var count5 = 0;
+        var sI5 = setInterval(function() {
+            if (checkTest5) {
+                clearInterval(sI5);
+                count5 = 0;
+                checkTest5 = false;
+            }
+            count5++;
+            document.getElementById('test5Output').innerHTML = count5;
+        }, 1000);
+        return sI5;
+    }
+
+    test5Stop = function() {
+        checkTest5 = true;
+        document.getElementById('test5Output').innerHTML = "1";
+    }
+</script>
 
 </html>

@@ -2,8 +2,27 @@
     font-family: Tahoma;
 }
 
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+
 label {
     font-weight: bold;
+    font-size: 30px;
+}
+
+button {
+    margin-top: 30px;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover {
+    color: white;
+    background-color: black;
 }
 
 .img5-1 {

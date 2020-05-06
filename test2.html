@@ -6,19 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <style>
+        input {
+            font-size: 20px;
+        }
+        
+        div:first-child {
+            margin-top: 50px
+        }
+    </style>
     <title>Test 2</title>
 </head>
 
 <body>
-    <form action="">
+    <div>
         <label for="xvalue">X = </label>
         <input type="text" name="xvalue" id="xvalue">
+    </div>
+    <div>
         <label for="yvalue">Y = </label>
         <input type="text" name="yvalue" id="yvalue">
+    </div>
+    <div>
         <label for="svalue">S = </label>
         <input type="text" name="svalue" id="svalue" readonly>
-        <input type="button" value="Sum" id="submit2" onclick="test2Submit()">
-    </form>
+    </div>
+    <button id="submit2" onclick="test2Submit()">Submit</button>
 </body>
+<script>
+    test2Submit = function() {
+        if (!test2CheckNumber()) {
+            alert('Hãy nhập số!')
+        } else {
+            var x = document.getElementById("xvalue").value;
+            var y = document.getElementById("yvalue").value;
+            var result = Number(x) + Number(y);
+            document.getElementById('svalue').value = result;
+        }
+    }
+
+    test2CheckNumber = function() {
+        var x = document.getElementById("xvalue").value;
+        var y = document.getElementById("yvalue").value;
+        if (Number(x) != x || Number(y) != y || x == '' || y == '') {
+            return false;
+        }
+        return true;
+    }
+</script>
 
 </html>

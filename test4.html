@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <style>
+        p {
+            margin: 0 50px 0 50px;
+            font-size: 25px;
+            text-align: justify;
+        }
+    </style>
     <title>Test 4</title>
 </head>
 
@@ -16,5 +23,18 @@
         <button id="test4Color" onclick="test4ChangeColor()">Change Color</button>
     </div>
 </body>
+<script>
+    test4ChangeColor = function() {
+        var r = 0;
+        var g = 0;
+        var b = 0;
+        var randomColor = '';
+        r = Math.floor(Math.random() * 255);
+        g = Math.floor(Math.random() * 255);
+        b = Math.floor(Math.random() * 255);
+        randomColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+        document.getElementById('test4Text').style.color = randomColor;
+    }
+</script>
 
 </html>

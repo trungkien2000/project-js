@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <style>
+        .img5-1 {
+            width: 60px;
+            height: auto;
+            margin: 200px 20px 0 20px;
+        }
+        
+        .img5-2 {
+            width: 150px;
+            height: auto;
+            border-radius: 20px;
+            margin: 40px 20px 0 20px;
+        }
+    </style>
     <title>Final test</title>
 </head>
 
@@ -24,5 +38,28 @@
         <img id="test6-6" class="img5-2" src="./img/6.jpg" alt="6">
     </div>
 </body>
+<script>
+    test6Play = function() {
+        var count6 = 0;
+        const temp = 'test6-'
+        for (let i = 1; i <= 6; i++) {
+            setTimeout(function() {
+
+            }, 1000)
+        }
+        var sI6 = setInterval(function() {
+            count6++;
+            var show = temp + count6;
+            console.log(count6);
+            console.log(show);
+            document.getElementById('test6Output').innerHTML = document.getElementById('show');
+        }, 1000);
+        return sI6;
+    }
+
+    test6Stop = function() {
+
+    }
+</script>
 
 </html>
