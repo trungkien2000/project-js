@@ -46,23 +46,36 @@
 </body>
 <script>
     var checkTest6 = false;
+    var flag = 0;
+    var index = 1;
+    var temp = 0;
     test6Play = function() {
-        checkTest6 = false;
-        var index = 1;
-        var sI6 = setInterval(function() {
+
+        sI6 = setInterval(function() {
             if (!checkTest6) {
+
                 document.getElementById('test6Output').innerHTML = '<img src="./img/' + index + '.jpg" width="25%">';
-                console.log(index);
                 index++;
                 if (index == 7) {
                     index = 1;
                 }
+                if (flag != 0) {
+                    index = temp;
+
+                }
+            } else {
+                clearInterval(sI6);
+                checkTest6 = false;
+                flag = 0;
             }
-        }, 1000)
+            console.log(index);
+        }, 1000);
         return sI6;
     }
 
     test6Stop = function() {
+        flag++;
+        temp = index;
         checkTest6 = true;
     }
 </script>
